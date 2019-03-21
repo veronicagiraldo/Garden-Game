@@ -16,7 +16,13 @@ class GameProvider extends React.Component{
     }
   }
   // GET info from DB about harvest
- 
+//   getPlant = () => {
+//     axios.get('/plants').then(res => {
+//         this.setState({
+//             plants: res.data
+//         })
+//     })
+// }
   // onclickSeed function for each= 
   // onclickWater
   // onclickSun

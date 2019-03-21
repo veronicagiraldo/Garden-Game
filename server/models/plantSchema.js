@@ -9,11 +9,21 @@ const plantSchema = new Schema ({
     },
     plantPicture: {
         type: String,
-        required: true
+        required: true,
+        imageUrl: ""
     },
     plantFact: {
         type: String,
-        default: ''
+        required: true
+    },
+    harvested: {
+        type: Boolean,
+        required: true,
+        default: false
+    },
+    growing: {
+        type: Boolean,
+        required: false
     }
 
 })
