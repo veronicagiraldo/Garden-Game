@@ -18,12 +18,7 @@ const plantSchema = new Schema ({
     },
     harvested: {
         type: Boolean,
-        required: true,
         default: false
-    },
-    growing: {
-        type: Boolean,
-        required: false
     }
 
 })
