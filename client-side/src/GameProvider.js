@@ -1,5 +1,5 @@
 import React from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 
 const {Consumer, Provider} = React.createContext() 
 
@@ -10,11 +10,18 @@ class GameProvider extends React.Component{
       sun: false,
       water: false,
       seed: false,
-      availplants: [],
+      availPlants: [],
       harvestPlants: [],
       randomEnemies: [],
     }
   }
+
+
+
+  getPlant = () => {
+    axios.get("") 
+  }
+
   // GET info from DB about harvest
  
   // onclickSeed function for each= 
