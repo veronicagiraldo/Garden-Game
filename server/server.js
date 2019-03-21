@@ -10,6 +10,9 @@ mongoose.connect('mongodb://localhost:27017/garden-game', {useNewUrlParser: true
 
 .catch(err => console.error(err))
 
+// Routes for Harvested Veggies
+
+
 
 const port = 4204;
 
