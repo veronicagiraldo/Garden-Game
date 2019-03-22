@@ -7,37 +7,30 @@ class GameProvider extends React.Component{
   constructor(){
     super()
     this.state ={
-      sun: false,
-      water: false,
-      seed: false,
-      availPlants: [],
-      harvestPlants: [],
-      randomEnemies: [],
+      // sun: false,
+      // water: false,
+      // seed: false,
+      // availPlants: [],
+      plants: [],
+      // harvestPlants: [],
+      // randomEnemies: [],
     }
   }
 
-
-
   getPlant = () => {
-    axios.get("") 
+    axios.get("/plants").then(res => {
+      console.log(res.data)
+      console.log("am I working")
+      this.setState({
+        plants: res.data
+      })
+    }) 
   }
 
-  // GET info from DB about harvest
-//   getPlant = () => {
-//     axios.get('/plants').then(res => {
-//         this.setState({
-//             plants: res.data
-//         })
-//     })
-// }
-  // onclickSeed function for each= 
-  // onclickWater
-  // onclickSun
-  // math.random= enemies 
-   
   render(){
     return(
       <Provider value= {{
+        getPlant: this.getPlant,
         ...this.state
       }}>
       {this.props.children}
