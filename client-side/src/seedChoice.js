@@ -1,6 +1,9 @@
 import React from 'react';
 import { withGame } from './GameProvider';
 import {Link} from "react-router-dom";
+import cabbageCard from "./images/cabbageCard.png"
+import carrotCard from "./images/carrotCard.png"
+import tomatoCard from "./images/tomatoCard.png"
 
 class seedChoice extends React.Component {
 
@@ -16,6 +19,10 @@ class seedChoice extends React.Component {
         <p>Select which seed you want to plant</p>
 
         {mappedPlants}
+
+        <img src={cabbageCard} alt=""/>
+        <img src={carrotCard} alt=""/>
+        <img src={tomatoCard} alt=""/>
 
       </div>
     );

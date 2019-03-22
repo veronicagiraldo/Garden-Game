@@ -19,8 +19,8 @@ class GameProvider extends React.Component{
 
   getPlant = () => {
     axios.get("/plants").then(res => {
-      console.log(res.data)
-      console.log("am I working")
+      // console.log(res.data)
+      // console.log("am I working")
       this.setState({
         plants: res.data
       })
