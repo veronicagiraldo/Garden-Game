@@ -3,7 +3,7 @@ import Home from './Home';
 import{Switch, Route} from 'react-router-dom';
 import HowTo from './HowTo';
 import gameDisplay from './gameDisplay';
-// import { homedir } from 'os';
+import seedChoice from './seedChoice';
 // import GameProvider from '/GameProvider';
 
 class App extends React.Component {
@@ -14,6 +14,7 @@ class App extends React.Component {
           <Route exact path ='/' component={Home}/>
           <Route path ='/HowTo' component={HowTo}/>
           <Route path ='/gameDisplay'component={gameDisplay}/>
+          <Route path='./seedChoice' component={seedChoice}/>
       </Switch>
     </div>
   )

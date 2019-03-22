@@ -9,7 +9,7 @@ plantRoute.route('/')
     .get((req, res) => {
         Plant.find((err, plants) => {
             if (err) {
-                return res.status(500).next(err)
+                return res.status(500).send(err)
             }
             return res.status(200).send(plants)
         })

@@ -1,5 +1,5 @@
 import React from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 
 const {Consumer, Provider} = React.createContext() 
 
@@ -7,30 +7,31 @@ class GameProvider extends React.Component{
   constructor(){
     super()
     this.state ={
-      sun: false,
-      water: false,
-      seed: false,
+      onSun: false,
+      onWater: false,
+      onSeed: false,
+      plants:[],
       availplants: [],
-      harvestPlants: [],
-      randomEnemies: [],
+      // harvestPlants: [],
+      // randomEnemies: [],
     }
   }
+  
   // GET info from DB about harvest
-//   getPlant = () => {
-//     axios.get('/plants').then(res => {
-//         this.setState({
-//             plants: res.data
-//         })
-//     })
-// }
-  // onclickSeed function for each= 
-  // onclickWater
-  // onclickSun
-  // math.random= enemies 
-   
+  getPlant = () => {
+    axios.get('/plants').then(res => {
+      console.log("working?")
+        this.setState({
+          plants: res.data
+        })
+    })
+}
+
+
   render(){
     return(
       <Provider value= {{
+        getPlant: this.getPlant,
         ...this.state
       }}>
       {this.props.children}
@@ -38,7 +39,6 @@ class GameProvider extends React.Component{
     );
   }
 }
-
 export default GameProvider;
 
 export function withGame (C) {
