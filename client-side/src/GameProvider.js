@@ -16,17 +16,16 @@ class GameProvider extends React.Component{
       // randomEnemies: [],
     }
   }
-  
-  // GET info from DB about harvest
-  getPlant = () => {
-    axios.get('/plants').then(res => {
-      console.log("working?")
-        this.setState({
-          plants: res.data
-        })
-    })
-}
 
+  getPlant = () => {
+    axios.get("/plants").then(res => {
+      console.log(res.data)
+      console.log("am I working")
+      this.setState({
+        plants: res.data
+      })
+    }) 
+  }
 
   render(){
     return(
