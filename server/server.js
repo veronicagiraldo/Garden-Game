@@ -23,4 +23,4 @@ app.listen(port, () => {
 // Routes
 app.use('/plants', require('./routes/plantRoutes'))
 
-// do i need another Route here for Database(harvestplants here???)
+// do I need another Route here for Database(harvestplants here???)

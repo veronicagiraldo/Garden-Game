@@ -10,7 +10,7 @@ const plantSchema = new Schema ({
     plantPicture: {
         type: String,
         required: true,
-        imageUrl: ""
+        imageURL: ""
     },
     plantFact: {
         type: String,

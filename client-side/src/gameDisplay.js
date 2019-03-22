@@ -10,8 +10,11 @@ class gameDisplay extends React.Component{
   // }
 
   render(){
+    console.log(this.props)
     return(
+      // <div onClick={() => this.props.onclickWater()}>
       <div>
+        <button onClick={() => this.props.onClickSun}></button>
         HERE IS THE GAME
       </div>
     )
