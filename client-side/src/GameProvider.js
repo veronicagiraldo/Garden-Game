@@ -3,6 +3,28 @@ import axios from 'axios';
 
 const {Consumer, Provider} = React.createContext() 
 
+
+
+// const greenhousePlants = [
+//   {
+//     recordId: '1232132132',
+//     name: 'tomato',
+//     plantId: '192831209382',
+//     timestamp: new Date().toISOString()
+//   },
+//   {
+//     id: '1232132132',
+//     name: 'tomato',
+//     timestamp: new Date().toISOString()
+//   },
+//   {
+//     id: '1232132132',
+//     name: 'carrot',
+//     timestamp: new Date().toISOString()
+//   }
+// ]
+
+
 class GameProvider extends React.Component{
   constructor(){
     super()
@@ -12,11 +34,10 @@ class GameProvider extends React.Component{
       // seed: false,
       // availPlants: [],
       plants: [],
-      // harvestPlants: [],
+      harvestPlants: [],
       // randomEnemies: [],
     }
   }
-
   getPlant = () => {
     axios.get("/plants").then(res => {
       // console.log(res.data)
@@ -26,11 +47,20 @@ class GameProvider extends React.Component{
       })
     }) 
   }
+  getHarvest = () => {
+    console.log("harvest!!")
+    axios.get('/plants/greenhouse').then(res => {
+      this.setState({
+        harvestPlants: res.data
+      })
+    })
+  }
 
   render(){
     return(
       <Provider value= {{
         getPlant: this.getPlant,
+        getHarvest: this.getHarvest,
         ...this.state
       }}>
       {this.props.children}

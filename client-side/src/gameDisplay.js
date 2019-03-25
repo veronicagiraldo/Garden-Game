@@ -25,7 +25,6 @@ class gameDisplay extends React.Component{
       enemypick: ""
     }
   }
-
   componentDidMount(){
     this.props.getPlant()
   }

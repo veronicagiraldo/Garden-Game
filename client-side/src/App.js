@@ -5,6 +5,7 @@ import HowTo from './HowTo';
 import gameDisplay from './gameDisplay';
 import seedChoice from './seedChoice';
 import Navbar from './Navbar';
+import Greenhouse from './Greenhouse';
 
 class App extends React.Component {
   render(){
@@ -17,6 +18,7 @@ class App extends React.Component {
             <Route path ='/HowTo' component={HowTo}/>
             <Route exact path ='/seedChoice' component={seedChoice}/>
             <Route path ='/seedChoice/:vegetable'component={gameDisplay}/>
+            <Route path ='/greenhouse' component={Greenhouse}/>
           </Switch>
         </div>
       </div>
