@@ -3,6 +3,126 @@
   src: url(krungthep.ttf)
 }
 
+body {
+  margin: 0px;
+}
+
+/* img {
+  height:50px;
+  width: 50px;
+} */
+
+.nav {
+  background-color: #B0F1F4;
+  height: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navLinks {
+  display: flex;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 120px;
+  height: 5vh;
+  font-family: krungthep;
+  text-decoration: none;
+  color: #707070;
+  box-shadow: #707070 2px 2px;
+}
+
+.bodyContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 90vh;
+}
+
+.title {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  padding: 35px;
+  padding-top: 15px;
+  font-family: krungthep;
+  color: #707070;
+  margin: auto;
+  background-image: url("images/home-background.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 500px;
+}
+
+.gardenParty{
+  text-align: center;
+  font-size: 60px;
+}
+
+.aboutContainer {
+  height: 100px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.titlePage {
+  font-size: 30px;
+  text-decoration: none;
+  width: 400px;
+  height: 70px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #9D7C6B;
+  border: dotted rgb(124, 98, 85) 1px;
+}
+
+.playContainer {
+  height: 70px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.seedChoiceContainer {
+  /* position: relative; */
+  width: 80%;
+}
+
+.selectSeed {
+  display: flex;
+  justify-content: center;
+  font-family: krungthep;
+  color: #707070;
+  font: 50px;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 0px;
+
+}
+
+.seedSelection {
+  /* position: absolute; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  /* height: 50px; */
+}
+
+.cardSelections {
+  /* position: absolute; */
+  height: 200px;
+}
+
 .gameContainer {
   display: flex;
   width: 100%;
@@ -32,95 +152,4 @@
   height: 100%;
   width: 20vh;
   align-self: flex-end;
-}
-
-.bodyContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url("images/background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  height: 90vh;
-}
-
-.nav {
-  background-color: #B0F1F4;
-  height: 10vh;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.navLinks {
-  display: flex;
-  border-radius: 50px;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  width: 120px;
-  height: 5vh;
-  font-family: krungthep;
-  text-decoration: none;
-  color: #707070;
-  box-shadow: #707070 2px 2px;
-}
-
-body {
-  margin: 0px;
-}
-
-.title {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  padding: 35px;
-  padding-top: 15px;
-  font-family: krungthep;
-  color: #707070;
-  margin: auto;
-  background-image: url("images/home-background.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 500px;
-  width: 500px;
-}
-
-.gardenParty{
-
-  text-align: center;
-  font-size: 60px;
-}
-
-.titlePage {
-  font-size: 30px;
-  text-decoration: none;
-  width: 400px;
-  height: 70px;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  background-color: #9D7C6B;
-  border: dotted rgb(124, 98, 85) 1px;
-}
-
-.playContainer {
-  height: 70px;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-}
-
-.aboutContainer {
-  height: 100px;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-}
-
-img {
-  height:50px;
-  width: 50px;
 }
