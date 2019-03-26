@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="633" height="353" viewBox="0 0 633 353">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="633" height="353" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Repeat_Grid_1" data-name="Repeat Grid 1" clip-path="url(#clip-path)">
+    <g transform="translate(-644 -598)">
+      <g id="Rectangle_3" data-name="Rectangle 3" transform="translate(644 598)" fill="#9d7c6b" stroke="rgba(75,53,33,0.4)" stroke-width="1" stroke-dasharray="10">
+        <rect width="633" height="73" rx="36.5" stroke="none"/>
+        <rect x="0.5" y="0.5" width="632" height="72" rx="36" fill="none"/>
+      </g>
+    </g>
+    <g transform="translate(-644 -532)">
+      <g id="Rectangle_3-2" data-name="Rectangle 3" transform="translate(644 598)" fill="#9d7c6b" stroke="rgba(75,53,33,0.4)" stroke-width="1" stroke-dasharray="10">
+        <rect width="633" height="73" rx="36.5" stroke="none"/>
+        <rect x="0.5" y="0.5" width="632" height="72" rx="36" fill="none"/>
+      </g>
+    </g>
+    <g transform="translate(-644 -466)">
+      <g id="Rectangle_3-3" data-name="Rectangle 3" transform="translate(644 598)" fill="#9d7c6b" stroke="rgba(75,53,33,0.4)" stroke-width="1" stroke-dasharray="10">
+        <rect width="633" height="73" rx="36.5" stroke="none"/>
+        <rect x="0.5" y="0.5" width="632" height="72" rx="36" fill="none"/>
+      </g>
+    </g>
+    <g transform="translate(-644 -400)">
+      <g id="Rectangle_3-4" data-name="Rectangle 3" transform="translate(644 598)" fill="#9d7c6b" stroke="rgba(75,53,33,0.4)" stroke-width="1" stroke-dasharray="10">
+        <rect width="633" height="73" rx="36.5" stroke="none"/>
+        <rect x="0.5" y="0.5" width="632" height="72" rx="36" fill="none"/>
+      </g>
+    </g>
+    <g transform="translate(-644 -334)">
+      <g id="Rectangle_3-5" data-name="Rectangle 3" transform="translate(644 598)" fill="#9d7c6b" stroke="rgba(75,53,33,0.4)" stroke-width="1" stroke-dasharray="10">
+        <rect width="633" height="73" rx="36.5" stroke="none"/>
+        <rect x="0.5" y="0.5" width="632" height="72" rx="36" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>
