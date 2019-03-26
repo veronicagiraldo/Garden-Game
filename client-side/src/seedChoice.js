@@ -20,6 +20,7 @@ class seedChoice extends React.Component {
       } else if (plant.plantName === 'Carrot'){
         return <Link key={plant._id} to={`/seedChoice/${plant._id}`}><img className="cardSelections" src={carrotCard} alt=""/></Link>
       }
+      return null
     })
     return(
       <div className="seedChoiceContainer">

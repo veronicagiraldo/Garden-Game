@@ -3,36 +3,10 @@ import axios from 'axios';
 
 const {Consumer, Provider} = React.createContext() 
 
-
-
-// const greenhousePlants = [
-//   {
-//     recordId: '1232132132',
-//     name: 'tomato',
-//     plantId: '192831209382',
-//     timestamp: new Date().toISOString()
-//   },
-//   {
-//     id: '1232132132',
-//     name: 'tomato',
-//     timestamp: new Date().toISOString()
-//   },
-//   {
-//     id: '1232132132',
-//     name: 'carrot',
-//     timestamp: new Date().toISOString()
-//   }
-// ]
-
-
 class GameProvider extends React.Component{
   constructor(){
     super()
     this.state ={
-      // sun: false,
-      // water: false,
-      // seed: false,
-      // availPlants: [],
       plants: [],
       harvestPlants: [],
       // randomEnemies: [],
@@ -47,6 +21,25 @@ class GameProvider extends React.Component{
       })
     }) 
   }
+  //  postPlant =()
+  postPlant = (newPlant) => {
+    axios.post('/plants', newPlant).then(res =>{
+      this.setState(prevState => ({
+        plants: [...prevState.plants, newPlant]
+      }))
+    })
+  }
+  // create a new plant on the DB with seedchoice
+  // put/update
+  editPlant = (_id, updatePlant) => {
+    axios.put(`/plants/${_id}`, updatePlant).then(res => {
+      console.log(res.data.plant)
+      this.setState(prevState => ({
+        plants: prevState.plants.map(plant => plant._id === _id ? plant = res.data.plant : plant)
+      }))
+    })
+    .catch(err => console.log(err))
+  }
   getHarvest = () => {
     console.log("harvest!!")
     axios.get('/plants/greenhouse').then(res => {
@@ -60,6 +53,8 @@ class GameProvider extends React.Component{
     return(
       <Provider value= {{
         getPlant: this.getPlant,
+        editPlant: this.editPlant,
+        postPlant: this.postPlant,
         getHarvest: this.getHarvest,
         ...this.state
       }}>
