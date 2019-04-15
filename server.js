@@ -5,12 +5,12 @@ const app = express();
 const morgan = require('morgan')
 app.use(express.json());
 
-const PORT = process.env.PORT || 4204;
+const PORT = 4208;
 // const port = 4204;
 
 app.use(morgan('dev'))
 
-app.use(express.static(path.join(__dirname, "client", "build")))
+app.use(express.static(path.join(__dirname, "client-side", "build")))
 app.use('/plants', require('./routes/plantRoutes'))
 // app.use('/greenhouse', require('./routes/plantRoutes'))
 
@@ -26,7 +26,7 @@ mongoose.connect(process.env.MONGODB_URI|| 'mongodb://localhost:27017/garden-gam
 
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+    res.sendFile(path.join(__dirname, "client-side", "build", "index.html"));
 });
 
 app.listen(PORT, () => {
